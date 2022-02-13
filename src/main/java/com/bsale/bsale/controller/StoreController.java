@@ -18,21 +18,21 @@ public class StoreController {
     StoreService service;
     
     @GetMapping("/store/list/category")
-    public List<CategoryModel> getCategorys(){
+    public List<CategoryModel> getCategorys() throws Exception{
 
         return service.getCategorys();
 
     }
 
     @GetMapping("/store/list/product")
-    public List<ProductModel> getProducts(){
+    public List<ProductModel> getProducts() throws Exception{
         return service.getProducts();
     }
 
-    @GetMapping("/store/list/{category_name}")
+    @GetMapping("/store/list/{category_id}")
     public List<ProductModel> filterProductByCategory(
-        @PathVariable(name = "category_name") String categoryName
-    ){
-        return service.filterProductByCategory(categoryName);
+        @PathVariable(name = "category_id") int categoryId
+    ) throws Exception{
+        return service.filterProductByCategory(categoryId);
     }
 }
