@@ -7,18 +7,18 @@ Repositorio Creado para Almacenar Desarrollo de Prueba para BSALE.
 # Informacion
 Servicio Encargado de Obtener la informacion interna desde la BASE DE DATOS de BSALE para generar una API la cual será consumida desde un Cliente WEB, este cliente utilizará las siguientes funcionalidades:
 
-- Obtener Categorias
-- Obtener Productos
-- Obtener Productos por Categorias
+- Obtener Categorias (GET): /store/list/category
+- Obtener Productos (GET): /store/list/product
+- Obtener Productos por Categorias (GET): /store/list/{category_id}
 
-# Obtener Categorias
+# Obtener Categorias (GET)
 Metodo que obtiene las categorias informadas por la BASE DE DATOS.
 
 Los campos de respuesta que posee son los siguientes:
 - ID (ID DE CATEGORIA)
 - NAME (NOMBRE DE CATEGORIA)
 
-# Obtener Productos
+# Obtener Productos (GET)
 Metodo que obtiene los productos informados por la BASE DE DATOS.
 
 Los campos de respuesta que posee son los siguientes:
@@ -29,7 +29,7 @@ Los campos de respuesta que posee son los siguientes:
 - DISCOUNT (DESCUENTO DEL PRODUCTO)
 - CATEGORY (CATEGORIA DEL PRODUCTO)
 
-# Obtener Productos Por Categoria
+# Obtener Productos Por Categoria (GET)
 Metodo que obtiene los productos por la categoria asignada, este requiere un campo de entrada llamado "CATEGORY_ID" el cual se encuentra directamente en la URL como "patch variable".
 
 Los campos de respuesta que posee son los siguientes:
